@@ -14,3 +14,18 @@ Through training on a public chest scan dataset, this model is able to distingui
 * **Language:** Python
 * **Frameworks/Libraries:** Tensorflow, Keras, Matplotlib
 * **Dataset:** https://www.kaggle.com/datasets/paultimothymooney/chest-xray-pneumonia
+
+## Results
+Initial runs running on a handmade model resulted in high accuracy, yet failed to perform when running on independent data. Achieving accuracy in the 60s yet having 100% accuracy during training.
+
+<img width="584" height="455" alt="pneuacc1" src="https://github.com/user-attachments/assets/861012f8-181f-4d9a-86b1-08f7357f8ced" />
+
+
+Through modifying the models layers to bettter handle the inputs, adding callbacks, and augmenting the training data the models overfitting dropped. Yet still only performed in the 80s.
+
+<img width="576" height="455" alt="pneuacc2" src="https://github.com/user-attachments/assets/2b252eed-cfad-4545-bc85-ea28e35a6fb9" />
+
+
+The final push in accuracy was achieved using transfer learning and fine tuning. By leveraging the EfficientNetB0 architecture and fine-tuning techniques, the model is able to achieve an accuracy of 90%. While also cutting the parameters in half, improving training time and compute usage.
+
+<img width="539" height="432" alt="download" src="https://github.com/user-attachments/assets/1df27604-2d43-4142-90a5-a621a91b0f78" />
